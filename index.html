@@ -27,11 +27,26 @@
             font-size: 2rem;
             font-weight: bold;
         }
+        .loader {
+            border: 16px solid #f3f3f3; /* Cor do fundo */
+            border-top: 16px solid green; /* Cor do efeito */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            margin: 0 auto; /* Centraliza na página */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
     <div class="centered-text">
         <p>Aguarde, em breve novidades</p>
+        <div class="loader"></div>
     </div>
     <!-- Script do Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
